@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="description" content="Generador de degradados para Css por Darinel Cigarroa De Los Santos">
+    <meta name="theme-color" content="#000" />
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" href="./img/icon32.png" type="image/png">
+    <link rel="apple-touch-icon" href="./img/icon32.png">
+    <link rel="apple-touch-startup-image" href="./img/icon32.pngs">
+    <link rel="manifest" href="./manifest.json">
+
+</head>
+
+<body>
+    <div id="app" class="app">
+        <h1>{{ title }}</h1>
+
+        <form>
+            <label>Color 1: <input class="select-color" v-model="firstColor" type="color"></label>
+            <label>Color 2: <input class="select-color" v-model="secondColor" type="color"></label>
+        </form>
+        <br>
+        <form class="formSetColor">
+            <label class="select-gradient" v-on:click="copyColor">
+                <input class="inputSetColor" id="inputSetColor" type="text" :value="setColor">
+            </label>
+        </form>
+        <br>
+
+        <form class="orientation">
+            <label for="right"><input id="right" type="radio" v-model="orientation" value="right" checked>Right</label>
+            <label for="left"><input id="left" type="radio" v-model="orientation" value="left">Left</label>
+            <label for="top"><input id="top" type="radio" v-model="orientation" value="top">Top</label>
+            <label for="bottom"><input id="bottom" type="radio" v-model="orientation" value="bottom">Bottom</label>
+        </form>
+
+        <div class="area" :style="setColor"></div>
+
+    </div>
+    <script src="./load.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+</body>
+
+</html>

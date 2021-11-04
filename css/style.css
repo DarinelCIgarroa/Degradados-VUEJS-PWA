@@ -1,0 +1,44 @@
+body {
+    background-color: #36363aeb;
+    color: white;
+}
+
+
+input {
+    cursor: pointer;
+}
+
+.select-color {
+    margin: 0px 10px;
+}
+
+.area {
+    width: 90%;
+    height: 300px;
+    margin: 10px;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.orientation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.select-gradient {
+    width: 100%;
+}
+.inputSetColor{
+    width: 340px;
+}
+
+@media (min-width: 1024px) {  
+    .area{
+        height: 500px !important;
+    }
+}

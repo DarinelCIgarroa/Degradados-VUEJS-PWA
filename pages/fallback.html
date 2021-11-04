@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página no encontrada</title>
+    <link rel="stylesheet" href="../css/styleNotFound.css">
+</head>
+
+<body>
+    <section id="notfound" class="notfound animate__animated animate__fadeInUp">
+        <div id="container">
+            <div class="content">
+                <h2>404</h2>
+                <h4>¡Opps! Página no encontrada</h4>
+                <p>
+                    No existe la página a la que intenta acceder . Puedes estar
+                    escribiendo mal la dirección o la página ha sido movida
+                </p>
+                <a href="#">Regresar al inicio</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const container = document.getElementById('container');
+        window.onmousemove = function (e) {
+            var x = - e.clientX / 5,
+                y = - e.clientY / 5;
+            container.style.backgroundPositionX = x + 'px';
+            container.style.backgroundPositionY = y + 'px';
+        }
+    </script>
+
+</body>
+
+</html>
